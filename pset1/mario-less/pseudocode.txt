@@ -1,1 +1,6 @@
+ask user for number between 1 and 8
+    if number it outside range, repeat prompt until inside range
+loop from 1 to height
+    print i hashes
+    new line
 
