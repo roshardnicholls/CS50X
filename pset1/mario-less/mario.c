@@ -20,7 +20,7 @@ int main(void)
         // Right-align the bricks
         for (int j = 0; j < offset; j++)
         {
-            printf(".");
+            printf(" ");
         }
 
         // Print the bricks
