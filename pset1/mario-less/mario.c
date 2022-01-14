@@ -17,15 +17,18 @@ int main(void)
     {
         int offset = (height - 1) - i;
 
-        for (int k = 0; k <= offset; k++)
+        // Right-align the bricks
+        for (int j = 0; j <= offset; j++)
         {
             printf(".");
         }
 
-        for (int j = 0; j <= i; j++)
+        // Print the bricks
+        for (int k = 0; k <= i; k++)
         {
             printf("#");
         }
+
         // Move to the next row
         printf("\n");
     }
