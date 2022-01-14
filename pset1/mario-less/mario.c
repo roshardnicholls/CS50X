@@ -17,7 +17,7 @@ int main(void)
     {
         for (int j = 0; j < i; j++)
         {
-            printf("#\n");
+            printf("#");
         }
         // Move to the next row
         printf("\n");
