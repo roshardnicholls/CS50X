@@ -15,6 +15,13 @@ int main(void)
     // Create pyramid
     for (int i = 0; i < height; i++)
     {
+        int offset = (height - 1) - i;
+
+        for (int k = 0; k <= offset; k++)
+        {
+            printf(".");
+        }
+
         for (int j = 0; j <= i; j++)
         {
             printf("#");
