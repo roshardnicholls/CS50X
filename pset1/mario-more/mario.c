@@ -17,20 +17,22 @@ int main(void)
     {
         int offset = (height - 1) - i;
 
-        // Right-align the bricks
+        // Padding for left pyramid (right-aligned)
         for (int j = 0; j < offset; j++)
         {
             printf(" ");
         }
 
-        // Print the right-aligned bricks
+        // Print the left pyramid
         for (int k = 0; k <= i; k++)
         {
             printf("#");
         }
 
+        // Print the gap between pyramids
         printf("  ");
 
+        // Print the right pyramid
         for (int l = 0; l <= i; l++)
         {
             printf("#");
