@@ -18,7 +18,7 @@ int main(void)
         int offset = (height - 1) - i;
 
         // Right-align the bricks
-        for (int j = 0; j <= offset; j++)
+        for (int j = 0; j < offset; j++)
         {
             printf(".");
         }
