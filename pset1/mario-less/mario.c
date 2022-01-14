@@ -12,8 +12,14 @@ int main(void)
     }
     while (height < 1  || height > 8);
 
+    // Create pyramid
     for (int i = 0; i < height; i++)
     {
-        printf("#\n");
+        for (int j = 0; j < i; j++)
+        {
+            printf("#\n");
+        }
+        // Move to the next row
+        printf("\n");
     }
 }
