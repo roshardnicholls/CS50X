@@ -38,13 +38,14 @@ int main(void)
 int get_cents(void)
 {
     // TODO
+    int change;
     do
     {
-        int change = get_int("How many cents is the customer owed? ");
+        change = get_int("How many cents is the customer owed? ");
     }
     while (change < 0);
-    printf("Customer is owed %i cents.", change);
-    return 0;
+    // printf("Customer is owed %i cents.\n", change);
+    return change;
 }
 
 int calculate_quarters(int cents)
