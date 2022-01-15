@@ -38,6 +38,12 @@ int main(void)
 int get_cents(void)
 {
     // TODO
+    do
+    {
+        int change = get_int("How many cents is the customer owed? ");
+    }
+    while (change < 0);
+    printf("Customer is owed %i cents.", change);
     return 0;
 }
 
