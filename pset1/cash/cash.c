@@ -37,7 +37,7 @@ int main(void)
 
 int get_cents(void)
 {
-    // TODO
+    // Ask user how much change is owed; re-prompt if input is less than 0
     int change;
     do
     {
@@ -50,28 +50,28 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
-    // TODO
+    // Subtract as many quarters as possible
     int quarters = cents / 25;
     return quarters;
 }
 
 int calculate_dimes(int cents)
 {
-    // TODO
+    // Subtract as many dimes as possible
     int dimes = cents / 10;
     return dimes;
 }
 
 int calculate_nickels(int cents)
 {
-    // TODO
+    // Subtract as many nickels as possible
     int nickels = cents / 5;
     return nickels;
 }
 
 int calculate_pennies(int cents)
 {
-    // TODO
+    // At this point, cents is reduced to pennies
     int pennies = cents / 1;
     return pennies;
 }
