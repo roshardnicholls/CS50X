@@ -16,10 +16,13 @@ int main(void)
 void validate_card(long card_number)
 {
     int current_digit = 0;
+    int card_length = 0;
     while (card_number != 0)
     {
         current_digit = card_number % 10;
+        card_length++;
         printf("%i\n", current_digit);
+        printf("Card length: %i", card_length);
         card_number /= 10;
     }
 }
