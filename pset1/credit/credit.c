@@ -57,4 +57,6 @@ void validate_card(long card_number)
         // Remove the last digit so that we can use the next digit on following loop
         card_number /= 10;
     }
+    printf("Luhn Part 1: %i\n", luhn_part1);
+    printf("Luhn Part 2: %i\n", luhn_part2);
 }
