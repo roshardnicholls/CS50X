@@ -17,7 +17,8 @@ void validate_card(long card_number)
 {
     int current_digit = 0;
     int card_length = 0;
-
+    int luhn_part1 = 0;
+    int luhn_part2 = 0;
     // Loop over the card number starting from the end
     while (card_number != 0)
     {
@@ -25,8 +26,7 @@ void validate_card(long card_number)
         card_length++;
 
         // Implementing Luhn's Algorithm
-        int luhn_part1 = 0;
-        int luhn_part2 = 0; // Sum of doubled digits
+         // Sum of doubled digits
         // int luhn_total = 0;
 
         // Every other digit starting from second to last
