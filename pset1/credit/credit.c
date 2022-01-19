@@ -22,7 +22,7 @@ void validate_card(long card_number)
         current_digit = card_number % 10;
         card_length++;
         printf("%i\n", current_digit);
-        printf("Card length: %i", card_length);
         card_number /= 10;
     }
+    printf("Card length: %i\n", card_length);
 }
