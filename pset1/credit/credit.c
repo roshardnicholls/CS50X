@@ -22,3 +22,4 @@ void validate_card(long card_number)
         printf("%i\n", current_digit);
         card_number /= 10;
     }
+}
