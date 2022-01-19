@@ -17,12 +17,44 @@ void validate_card(long card_number)
 {
     int current_digit = 0;
     int card_length = 0;
+
+    // Loop over the card number starting from the end
     while (card_number != 0)
     {
         current_digit = card_number % 10;
         card_length++;
-        printf("%i\n", current_digit);
+
+        // Implementing Luhn's Algorithm
+        int luhn_part1 = 0;
+        int luhn_part2 = 0; // Sum of doubled digits
+        int luhn_total = 0;
+
+        // Every other digit starting from second to last
+        if (card_length % 2 == 0)
+        {
+            current_digit *= 2;
+            if (current_digit >= 10)
+            {
+                while (current_digit != 0)
+                {
+                    current_digit %= 10;
+                    luhn_part2 += current_digit;
+                }
+            }
+
+            else
+            {
+                luhn_part2 += current_digit;
+            }
+        }
+
+        else
+        {
+            luhn_part1 += current_digit;
+        }
+        // printf("%i\n", current_digit);
+
+        // Remove the last digit so that we can use the next digit on following loop
         card_number /= 10;
     }
-    printf("Card length: %i\n", card_length);
 }
