@@ -16,7 +16,7 @@ int main(void)
 void validate_card(long card_number)
 {
     int current_digit = 0;
-    while (card_number / 10 != 0)
+    while (card_number / 10 > 0)
     {
         current_digit = card_number % 10;
         printf("%i\n", current_digit);
