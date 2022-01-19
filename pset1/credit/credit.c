@@ -86,19 +86,16 @@ void classify_card(long card_number)
     {
         printf("VISA\n");
     }
-
     else if (card_number >= 51 && card_number <= 55)
     {
         printf("MASTERCARD\n");
     }
-
     else if (card_number == 34 || card_number == 37)
     {
         printf("AMEX\n");
     }
-
-    // else
-    // (
-    //     printf("INVALID\n");
-    // )
+    else
+    {
+        printf("INVALID\n");
+    }
 }
