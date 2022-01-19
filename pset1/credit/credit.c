@@ -56,5 +56,13 @@ void validate_card(long card_number)
     // printf("Luhn Part 1: %i\n", luhn_part1);
     // printf("Luhn Part 2: %i\n", luhn_part2);
 
-    luhn_total = luhn_part1 + luhn part2;
+    luhn_total = luhn_part1 + luhn_part2;
+    if (luhn_total % 10 == 0)
+    {
+        printf("Valid");
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
 }
