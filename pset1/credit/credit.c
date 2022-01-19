@@ -15,7 +15,7 @@ int main(void)
 // check if the number the user entered is a valid credit card number
 void validate_card(long card_number)
 {
-    int current_digit
+    int current_digit;
     while (current_digit / 10 != 0)
     {
         printf(current_digit)
