@@ -2,14 +2,22 @@
 #include <cs50.h>
 
 char validate_card(long card_number);
+void classify_card(long card_number);
 
 int main(void)
 {
     // Ask user for card number
     long card_number = get_long("Enter the card number: ");
 
-
-    validate_card(card_number);
+    char card_status = validate_card(card_number);
+    if (card_status == 'V')
+    {
+        classify_card(card_number);
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
 }
 
 // check if the number the user entered is a valid credit card number
