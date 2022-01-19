@@ -57,7 +57,7 @@ void validate_card(long card_number)
     // printf("Luhn Part 2: %i\n", luhn_part2);
 
     luhn_total = luhn_part1 + luhn_part2;
-    if (luhn_total % 10 == 0)
+    if (luhn_total % 10 == 0 && (card_length == 13 || card_length == 15 || card_length == 16))
     {
         printf("Valid");
     }
