@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
-void validate_card(long card_number);
+char validate_card(long card_number);
 
 int main(void)
 {
@@ -13,7 +13,7 @@ int main(void)
 }
 
 // check if the number the user entered is a valid credit card number
-void validate_card(long card_number)
+char validate_card(long card_number)
 {
     int current_digit = 0;
     int card_length = 0;
@@ -37,13 +37,11 @@ void validate_card(long card_number)
             {
                 luhn_part2 += (current_digit / 10) + (current_digit % 10);
             }
-
             else
             {
                 luhn_part2 += current_digit;
             }
         }
-
         else
         {
             luhn_part1 += current_digit;
