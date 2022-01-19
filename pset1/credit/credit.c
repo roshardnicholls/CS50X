@@ -73,3 +73,32 @@ char validate_card(long card_number)
         return 'I';
     }
 }
+
+void classify_card(long card_number)
+{
+    do
+    {
+        card_number /= 10;
+    }
+    while (card_number > 99);
+
+    if (card_number >=40 && card_number <= 49)
+    {
+        printf("VISA\n");
+    }
+
+    else if (card_number >= 51 && card_number <= 55)
+    {
+        printf("MASTERCARD\n");
+    }
+
+    else if (card_number == 34 || card_number == 37)
+    {
+        printf("AMEX\n");
+    }
+
+    else
+    (
+        printf("INVALID\n");
+    )
+}
