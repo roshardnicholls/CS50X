@@ -58,10 +58,10 @@ char validate_card(long card_number)
     if (luhn_total % 10 == 0
       && (card_length == 13 || card_length == 15 || card_length == 16))
     {
-        printf("Valid");
+        return 'V';
     }
     else
     {
-        printf("INVALID\n");
+        return 'I';
     }
 }
