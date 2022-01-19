@@ -35,7 +35,7 @@ void validate_card(long card_number)
             current_digit *= 2;
             if (current_digit >= 10)
             {
-                luhn_part2 = (current_digit / 10) + (current_digit % 10);
+                luhn_part2 += (current_digit / 10) + (current_digit % 10);
             }
 
             else
