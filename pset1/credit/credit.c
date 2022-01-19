@@ -97,8 +97,8 @@ void classify_card(long card_number)
         printf("AMEX\n");
     }
 
-    else
-    (
-        printf("INVALID\n");
-    )
+    // else
+    // (
+    //     printf("INVALID\n");
+    // )
 }
