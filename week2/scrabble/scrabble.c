@@ -18,7 +18,7 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    // TODO: Print the winner
+    // Print the winner (or TIE! if scores are equal)
     if (score1 > score2)
     {
         printf("Player 1 wins!\n");
@@ -37,12 +37,14 @@ int main(void)
 
 int compute_score(string word)
 {
-    // TODO: Compute and return score for string
+    // Compute and return score for string
     int n = strlen(word);
-    int letter_index;
+    int letter_index; // Used as lookup index in POINTS
     int score = 0;
     for (int i = 0; i < n; i++)
     {
+        /* Using ASCII table, compute the index needed to get
+        corresponding point value for current letter*/
         if (islower(word[i]))
         {
             letter_index = word[i] - 97;
