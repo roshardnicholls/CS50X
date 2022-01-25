@@ -37,7 +37,7 @@ int compute_score(string word)
             score += POINTS[letter_index];
         }
 
-        else (isupper(word[i]))
+        else if (isupper(word[i]))
         {
             letter_index = word[i] - 65;
             score += POINTS[letter_index];
