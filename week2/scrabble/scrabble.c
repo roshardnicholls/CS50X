@@ -19,6 +19,8 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
+    printf("Score 1: %i\n", score1);
+    printf("Score 2: %i\n", score2);
 }
 
 int compute_score(string word)
@@ -41,4 +43,6 @@ int compute_score(string word)
             score += POINTS[letter_index];
         }
     }
+
+    return score;
 }
