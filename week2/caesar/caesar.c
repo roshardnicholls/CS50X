@@ -3,7 +3,6 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 bool only_digits(string s);
 
