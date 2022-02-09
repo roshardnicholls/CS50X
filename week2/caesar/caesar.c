@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 bool only_digits(string s);
 
@@ -20,6 +21,10 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+
+    int key = atoi(argv[1]);
+
+    string text = get_string("Plaintext: ");
 
     return 0;
 }
