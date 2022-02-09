@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     int key = atoi(argv[1]);
 
     string text = get_string("plaintext: ");
-    char cipherchar = rotate(text, key);
+    char cipherchar = rotate(text[0], key);
     print
     return 0;
 }
