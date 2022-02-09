@@ -51,7 +51,7 @@ bool only_digits(string s)
 char rotate(char c, int n)
 {
     char rotated_letter;
-    if(isalpha(n))
+    if(isalpha(c))
     {
         rotated_letter = ((((c - 97) + n) % 26) + 97);
         return (char) rotated_letter;
