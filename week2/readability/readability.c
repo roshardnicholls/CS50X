@@ -11,11 +11,13 @@ int main(void)
 {
     string text = get_string("Text: ");
     int L = count_letters(text);
-    int W = count_words(text);
+    float W = (count_words(text) / 1.0);
     int S = count_sentences(text);
-    printf("%i letters\n", L);
-    printf("%i words\n", W);
-    printf("%i sentences\n", S);
+    // printf("%i letters\n", L);
+    // printf("%i words\n", W);
+    // printf("%i sentences\n", S);
+    float letter_avg = (L/W) * 100;
+    float sentence_avg = (S/W) * 100;
 }
 
 int count_letters(string text)
