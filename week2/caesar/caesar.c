@@ -16,7 +16,7 @@ int main(int argc, string argv[])
 
     bool key_check = only_digits(argv[1]);
 
-    if (key_check == false)
+    if (!(key_check))
     {
         printf("Usage: ./caesar key\n");
         return 1;
