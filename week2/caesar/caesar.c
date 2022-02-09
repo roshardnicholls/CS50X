@@ -54,4 +54,5 @@ char rotate(char c, int n)
     {
         rotated_letter = ((((c - 97) + n) % 26) + 97);
     }
+    printf("%c\n", (char) rotated_letter);
 }
