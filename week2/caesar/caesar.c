@@ -26,8 +26,16 @@ int main(int argc, string argv[])
     int key = atoi(argv[1]);
 
     string text = get_string("plaintext: ");
-    char cipherchar = rotate(text[0], key);
-    printf("%c\n", cipherchar);
+    printf("ciphertext: ");
+    for (int i = 0, n = strlen(text); i < n; i++)
+    {
+        char cipherchar = rotate(text[i], key);
+        printf("%c", cipherchar);
+    }
+
+    printf("\n");
+
+
     return 0;
 }
 
