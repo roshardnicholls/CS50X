@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 bool only_digits(string text);
 
@@ -12,18 +13,26 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    bool key_check = only_digits(argv[1]);
 
+    if (key_check == false)
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
 
     return 0;
 }
 
-bool only_digits(string text);
+bool only_digits(string s)
 {
-    for (int i = 0, n = strlen(argv); i < n; i++)
+    for (int i = 0, n = strlen(s); i < n; i++)
     {
-        if(!isdigit(argv[i]))
+        if(!isdigit(s[i]))
         {
-
+            return false;
         }
     }
+
+    return true;
 }
