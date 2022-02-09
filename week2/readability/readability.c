@@ -2,6 +2,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -13,13 +14,26 @@ int main(void)
     int L = count_letters(text);
     float W = (count_words(text) / 1.0);
     int S = count_sentences(text);
-    // printf("%i letters\n", L);
-    // printf("%i words\n", W);
-    // printf("%i sentences\n", S);
+
     float letter_avg = (L/W) * 100;
     float sentence_avg = (S/W) * 100;
     float index = (0.0588 * letter_avg) - (0.296 * sentence_avg) - 15.8;
-    printf("%.4f\n", index);
+    // printf("%.4f\n", index);
+
+    if (index < 1)
+    {
+        printf("Before Grade 1");
+    }
+
+    else if (index > 15.5)
+    {
+        printf("Grade 16+");
+    }
+
+    else
+    {
+        printf("Grade %i\n", (int) round(index));
+    }
 }
 
 int count_letters(string text)
