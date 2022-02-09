@@ -13,9 +13,9 @@ int main(void)
     int L = count_letters(text);
     int W = count_words(text);
     int S = count_sentences(text);
-    printf("%i letters", L);
-    printf("%i word", W);
-    printf("%i sentences", S);
+    printf("%i letters\n", L);
+    printf("%i word\n", W);
+    printf("%i sentences\n", S);
 }
 
 int count_letters(string text)
