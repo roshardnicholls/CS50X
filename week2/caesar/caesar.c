@@ -53,8 +53,17 @@ char rotate(char c, int n)
     char rotated_letter;
     if(isalpha(c))
     {
-        rotated_letter = ((((c - 97) + n) % 26) + 97);
-        return (char) rotated_letter;
+        if(islower(c))
+        {
+            rotated_letter = ((((c - 97) + n) % 26) + 97);
+            return (char) rotated_letter;
+        }
+
+        else
+        {
+            rotated_letter = ((((c - 65) + n) % 26) + 65);
+            return (char) rotated_letter;
+        }
     }
     return c;
 }
