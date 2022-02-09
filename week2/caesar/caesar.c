@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
 
 bool only_digits(string text);
 
@@ -28,7 +29,7 @@ bool only_digits(string s)
 {
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        if(!isdigit(s[i]))
+        if(isdigit(s[i]) == false)
         {
             return false;
         }
