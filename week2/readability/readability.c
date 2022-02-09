@@ -39,6 +39,7 @@ int count_words(string text)
         if (n == 0)
         {
             words = 0;
+            return words;
             break;
         }
 
