@@ -21,38 +21,38 @@ int main(void)
 int count_letters(string text)
 {
     int letters = 0;
-    for (int i = 0, n = strlen(text); i < n, i++)
+    for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (isalnum(text[i])
+        if (isalnum(text[i]))
         {
-            letters++
+            letters++;
         }
     }
-    return letters
+    return letters;
 }
 
 int count_words(string text)
 {
     int words = 0;
-    for (int i = 0; i < strlen(text), i++)
+    for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (isspace(text[i])
+        if (isspace(text[i]))
         {
-            words++
+            words++;
         }
     }
-    return words
+    return words;
 }
 
 int sentences(string text)
 {
     int sentences = 0;
-    for (int i = 0; i < strlen(text), i++)
+    for (int i = 0, n = strlen(text); i < n; i++)
     {
         if (text[i] == "." || text[i] == "!" || text[i] == "?")
         {
-            sentences++
+            sentences++;
         }
     }
-    return sentences
+    return sentences;
 }
