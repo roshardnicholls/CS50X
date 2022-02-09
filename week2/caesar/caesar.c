@@ -29,7 +29,12 @@ bool only_digits(string s)
 {
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        if(isdigit(s[i]) == false)
+        if(isdigit(s[i]))
+        {
+            continue;
+        }
+
+        else
         {
             return false;
         }
