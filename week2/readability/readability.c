@@ -18,6 +18,8 @@ int main(void)
     // printf("%i sentences\n", S);
     float letter_avg = (L/W) * 100;
     float sentence_avg = (S/W) * 100;
+    float index = 0.0588 * L - 0.296 * S - 15.8;
+    printf("%.4f", index)
 }
 
 int count_letters(string text)
