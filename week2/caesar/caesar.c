@@ -27,7 +27,7 @@ int main(int argc, string argv[])
 
     string text = get_string("plaintext: ");
     char cipherchar = rotate(text[0], key);
-    print
+    printf("%c\n", cipherchar);
     return 0;
 }
 
