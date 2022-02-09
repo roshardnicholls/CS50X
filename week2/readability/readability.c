@@ -33,22 +33,27 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    int words = 1;
-    for (int i = 0, n = strlen(text); i < n; i++)
-    {
-        if (n == 0)
-        {
-            words = 0;
-            return words;
-            break;
-        }
+    int words = 0;
+    int n = strlen(text);
 
-        else if (isspace(text[i]))
-        {
-            words++;
-        }
+    if (n == 0)
+    {
+        return words;
     }
-    return words;
+
+    else
+    {
+        words = 1;
+        for (int i = 0; i < n; i++)
+        {
+            if (isspace(text[i]))
+            {
+                words++;
+            }
+        }
+        return words;
+    }
+
 }
 
 int count_sentences(string text)
