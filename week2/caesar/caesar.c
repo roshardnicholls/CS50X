@@ -24,7 +24,7 @@ int main(int argc, string argv[])
 
     int key = atoi(argv[1]);
 
-    string text = get_string("Plaintext: ");
+    string text = get_string("plaintext: ");
 
     return 0;
 }
