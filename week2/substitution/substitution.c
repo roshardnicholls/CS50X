@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-bool validate_key(key);
+bool validate_key(string k);
 // char substitute(char c, string k);
 
 int main(int argc, string argv[])
