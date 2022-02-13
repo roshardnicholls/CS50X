@@ -83,14 +83,15 @@ bool validate_key(string k)
 char substitute(char c, string k)
 {
     char substituted_letter;
-    string standard_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string upper_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string lower_alphabet = "abcdefghijklmnopqrstuvwxyz";
     int target_position;
     bool target_found = false;
     int counter = 0;
 
     while (!target_found)
     {
-        if (c == standard_alphabet[counter])
+        if (c == upper_alphabet[counter] || c == lower_alphabet[counter])
         {
             target_position = counter;
             target_found = true;
