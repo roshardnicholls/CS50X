@@ -74,7 +74,7 @@ bool validate_key(string k)
 char substitute(char c, string k)
 {
     char substituted_letter;
-    string standard_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    string standard_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int target_position;
     bool target_found = false;
     int counter = 0;
