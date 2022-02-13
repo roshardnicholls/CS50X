@@ -38,3 +38,21 @@ validate_key(key):
                     display "Key must contain non-repeating characters"
                     return false
     return "valid"
+
+substitute(char, key):
+    declare substituted character
+    declare array with standard alphabet
+    declare target_position, counter
+    iterate over standard alphabet:
+        if char matches:
+            target_position is current index of alphabet
+            break
+        else:
+            counter++
+    set substituted character equal to value of target_position in key
+
+    if char is lowercase:
+        convert substituted character to lowercase
+    else:
+        convert substituted character to lowercase
+    return substituted character
