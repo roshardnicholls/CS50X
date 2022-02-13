@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 bool validate_key(string k);
-// char substitute(char c, string k);
+char substitute(char c, string k);
 
 int main(int argc, string argv[])
 {
@@ -21,7 +21,18 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string plaintext = get_string("plaintext: ")
+    string plaintext = get_string("plaintext: ");
+    printf("ciphertext: ");
+
+    for (int i = 0; i < 26; i++)
+    {
+        char cipherchar = substitute(plaintext[i], argv[1]);
+        printf("%c", cipherchar);
+    }
+
+    printf("\n");
+
+    return 0;
 }
 
 bool validate_key(string k)
@@ -58,4 +69,36 @@ bool validate_key(string k)
     }
 
     return true;
+}
+
+char substitute(char c, string k)
+{
+    char substituted_letter;
+    string standard_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    int target_position;
+    bool target_found = false;
+    int counter = 0;
+
+    while (!target_found)
+    {
+        if (c == k[counter])
+        {
+            target_position = counter;
+            target_found = true;
+        }
+
+        counter++;
+    }
+
+    if (islower(c))
+    {
+        substituted_letter = tolower(k[target_position]);
+    }
+
+    else
+    {
+        substituted_letter = toupper(k[target_position]);
+    }
+
+    return substituted_letter;
 }
