@@ -81,7 +81,7 @@ char substitute(char c, string k)
 
     while (!target_found)
     {
-        if (c == k[counter])
+        if (c == standard_alphabet[counter])
         {
             target_position = counter;
             target_found = true;
