@@ -26,8 +26,17 @@ int main(int argc, string argv[])
 
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
-        char cipherchar = substitute(plaintext[i], argv[1]);
-        printf("%c", cipherchar);
+        if (isalpha(plaintext[i]))
+        {
+            char cipherchar = substitute(plaintext[i], argv[1]);
+            printf("%c", cipherchar);
+        }
+
+        else
+        {
+            printf("%c", plaintext[i]);
+        }
+
     }
 
     printf("\n");
