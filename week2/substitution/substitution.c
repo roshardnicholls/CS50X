@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// bool validate_key(key);
+bool validate_key(key);
 // char substitute(char c, string k);
 
 int main(int argc, string argv[])
@@ -14,5 +14,5 @@ int main(int argc, string argv[])
         return 1;
     }
 
-
+    bool valid = validate_key(argv[1]);
 }
