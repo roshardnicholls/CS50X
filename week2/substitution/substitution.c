@@ -43,7 +43,7 @@ bool validate_key(string k)
 
             else
             {
-                for (int j = i; j < n; j++)
+                for (int j = i + 1; j < n; j++)
                 {
                     if (k[j] == k[i])
                     {
