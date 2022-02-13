@@ -24,7 +24,7 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext: ");
     printf("ciphertext: ");
 
-    for (int i = 0; i < 26; i++)
+    for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
         char cipherchar = substitute(plaintext[i], argv[1]);
         printf("%c", cipherchar);
