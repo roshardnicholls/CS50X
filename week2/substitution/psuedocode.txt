@@ -1,0 +1,40 @@
+main:
+did user enter exactly 1 comm-line arg?
+if no:
+    display "Please enter one comm-line arg"
+    return 1
+
+call validate_key
+if result from validate_key is false:
+    return 1
+
+get plaintext from user
+display "plaintext: " + plaintext
+display "ciphertext: "
+
+iterate over plaintext:
+    if char is alphabetical:
+        call substitute
+        display substituted character
+    else:
+        display char as is
+
+display newline
+return 0
+
+validate_key(key):
+    is the key 26 characters?
+    if no:
+        display "Key must contain 26 characters"
+        return false
+    else:
+        iterate over key:
+            if char is not alphabetical:
+                display "Key must contain letters only"
+                return false
+            else:
+                iterate over the rest of the key
+                if current character matches another character:
+                    display "Key must contain non-repeating characters"
+                    return false
+    return "valid"
