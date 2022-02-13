@@ -37,7 +37,7 @@ validate_key(key):
                 if current character matches another character:
                     display "Key must contain non-repeating characters"
                     return false
-    return "valid"
+    return true
 
 substitute(char, key):
     declare substituted character
