@@ -15,6 +15,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    // If the key is invalid, print an error message and stop the program
     bool valid = validate_key(argv[1]);
     if (!valid)
     {
