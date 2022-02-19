@@ -45,7 +45,7 @@ bool only_digits(string s)
 {
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        if(isdigit(s[i]))
+        if (isdigit(s[i]))
         {
             continue;
         }
@@ -64,17 +64,20 @@ char rotate(char c, int n)
     char rotated_letter;
 
     // Only rotate alphabetical characters
-    if(isalpha(c))
+    if (isalpha(c))
     {
         // Shift the character by n using ASCII values and return the rotated letter
-        if(islower(c))
+        if (islower(c))
         {
+            // Calculate diffence of char from 'a', then shift it by n
+            // Modulo divide by 26 to calculate offset from 'a' so that characters wrap around from z to a
             rotated_letter = ((((c - 97) + n) % 26) + 97);
             return (char) rotated_letter;
         }
 
         else
         {
+            // The same calulations as above but for uppercase letters
             rotated_letter = ((((c - 65) + n) % 26) + 65);
             return (char) rotated_letter;
         }
