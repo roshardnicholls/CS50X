@@ -57,7 +57,7 @@ int count_words(string text)
     int words = 0;
     int n = strlen(text);
 
-    // If the string is empty, no counting needed, words = 0
+    // If the text is empty, no counting needed, words = 0
     if (n == 0)
     {
         return words;
@@ -65,7 +65,7 @@ int count_words(string text)
 
     else
     {
-        // If the string is not empty, then there is at least one word
+        // If the text is not empty, then there is at least one word
         words = 1;
 
         // Count the number of words and return that number
