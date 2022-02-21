@@ -1,11 +1,14 @@
-sort1 uses: TODO
+sort1 uses: Bubble Sort
 
-How do you know?: TODO
+How do you know?: The runtime exponentially increased as n increased for the random data sets,
+but linearly increased for the sorted data sets - O(n^2) vs. O(n)
 
-sort2 uses: TODO
+sort2 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?: The runtimes for random, reversed, and sorted data sets trended similarly as n increased.
+THe runtimes stayed below 1 s which suggests a runtime of O(n*log(n))
 
-sort3 uses: TODO
+sort3 uses: Selection Sort
 
-How do you know?: TODO
+How do you know?: The runtimes for random, reversed, and sorted data sets trended similarly as n increased.
+THe runtimes exponentially increased at n = 50K which suggests a runtime of O(n^2)
