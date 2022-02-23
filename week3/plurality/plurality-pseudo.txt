@@ -3,6 +3,9 @@ if candidate_count == 1
     print candidates[0].name\n
 else
     declare int max_votes = 0
-    for i from 0 to n-1
+    for i from 0 to candidate_count
         if candidates[i].votes > candidates[i-1].votes
             max_votes = candidates[i].votes
+    for i from 0 to candidate_count
+        if candidates[i].votes == max_votes
+            print candidates[i].name\n
