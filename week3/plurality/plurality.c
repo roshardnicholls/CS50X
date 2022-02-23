@@ -94,10 +94,10 @@ void print_winner(void)
         // Loop over vote counts and update max_votes if a larger vote count is encountered
         for (int i = 0; i < candidate_count - 1; i++)
         {
-             if (max_votes < candidates[i + 1].votes)
-                {
-                    max_votes = candidates[i + 1].votes;
-                }
+            if (max_votes < candidates[i + 1].votes)
+            {
+                max_votes = candidates[i + 1].votes;
+            }
         }
 
         // Print candidate(s) who have the number of votes equal to max_votes
