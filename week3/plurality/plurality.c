@@ -84,7 +84,7 @@ void print_winner(void)
     // If there is only one candidate, that candidate is the winner
     if (candidate_count == 1)
     {
-        printf("%s\n",candidates[0].name);
+        printf("%s\n", candidates[0].name);
     }
 
     else
@@ -94,9 +94,9 @@ void print_winner(void)
         // Loop over vote counts and update max_votes if a larger vote count is encountered
         for (int i = 0; i < candidate_count - 1; i++)
         {
-             if (max_votes < candidates[i+1].votes)
+             if (max_votes < candidates[i + 1].votes)
              {
-                 max_votes = candidates[i+1].votes;
+                 max_votes = candidates[i + 1].votes;
              }
         }
 
@@ -105,7 +105,7 @@ void print_winner(void)
         {
             if (candidates[i].votes == max_votes)
             {
-                printf("%s\n",candidates[i].name);
+                printf("%s\n", candidates[i].name);
             }
         }
     }
