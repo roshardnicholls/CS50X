@@ -142,7 +142,9 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    // TODO
+    /* Iterate over all ballots. If candidate is not eliminated, update that candidate's vote total,
+    break out of the loop and move on to the next ballot. Else, move on to next choice and repeat.
+    */
     return;
 }
 
