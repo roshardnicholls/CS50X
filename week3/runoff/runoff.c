@@ -161,6 +161,7 @@ void tabulate(void)
                 j++;
         }
     }
+
     return;
 }
 
