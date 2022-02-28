@@ -154,11 +154,12 @@ void tabulate(void)
             candidate_index = preferences[i][j];
             if (candidates[candidate_index].eliminated == false)
             {
-                candidates[candidate_index].votes++;
                 break;
             }
             else
                 j++;
+
+            candidates[candidate_index].votes++;
         }
     }
 
