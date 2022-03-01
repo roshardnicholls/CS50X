@@ -151,10 +151,10 @@ void tabulate(void)
         for (int j = 0; j < candidate_count; j++)
         {
             // Connect the choice on the ballot to the corresponding candidate
-            candidate_index = preferences[i][j];
-            if (candidates[candidate_index].eliminated == false)
+
+            if (candidates[preferences[i][j]].eliminated == false)
             {
-                candidates[candidate_index].votes++;
+                candidates[preferences[i][j]].votes++;
                 break;
             }
     }
