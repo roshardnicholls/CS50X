@@ -145,22 +145,23 @@ void tabulate(void)
     /* Iterate over all ballots. If candidate is not eliminated, update that candidate's vote total,
     break out of the loop and move on to the next ballot. Else, move on to next choice and repeat.
     */
-    int candidate_index = 0;
+
     for (int i = 0; i < voter_count; i++)
     {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            // Connect the choice on the ballot to the corresponding candidate
-            candidate_index = preferences[i][j];
-            if (candidates[candidate_index].eliminated == false)
-            {
-                break;
-            }
-            else
-                j++;
+        // for (int j = 0; j < candidate_count; j++)
+        // {
+        //     // Connect the choice on the ballot to the corresponding candidate
+        //     candidate_index = preferences[i][j];
+        //     if (candidates[candidate_index].eliminated == false)
+        //     {
+        //         break;
+        //     }
+        //     else
+        //         j++;
 
-            candidates[candidate_index].votes++;
+        //     candidates[candidate_index].votes++;
         }
+
     }
 
     return;
