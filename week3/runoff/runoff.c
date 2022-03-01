@@ -150,13 +150,14 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            // Connect the choice on the ballot to the corresponding candidate
-
-            if (candidates[preferences[i][j]].eliminated == false)
+            while (candidates[preferences[i][j]].eliminated == true)
             {
-                candidates[preferences[i][j]].votes++;
-                break;
+                j++;
+                continue;
             }
+
+            candidates[preferences[i][j]].votes++;
+            break;
         }
     }
 
