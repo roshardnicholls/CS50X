@@ -183,9 +183,9 @@ int find_min(void)
     int remaining_candidate_count = 0;
 
     // Calculate how many candidates are eliminated
-    while (i < candidate_count)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminated = true)
+        if (candidates[i].eliminated == true)
         {
             eliminated_candidates++;
         }
@@ -195,9 +195,9 @@ int find_min(void)
     candidate remaining_candidates[candidate_count - eliminated_candidates];
     eliminated_candidates = 0;
 
-    while (j < candidate_count)
+    for (int j = 0; j < candidate_count; j++)
     {
-        if (candidates[i].eliminated = false)
+        if (candidates[j].eliminated == false)
         {
             eliminated_candidates++;
         }
@@ -211,7 +211,7 @@ int find_min(void)
 
     for (int k = 0; k < remaining_candidate_count; k++)
     {
-        if (remaining_candidates[k] < remaining_candidates[k + 1])
+        if (remaining_candidates.votes[k] < remaining_candidates.votes[k + 1])
         {
             min_votes = remaining_candidates[k];
         }
