@@ -180,7 +180,7 @@ int find_min(void)
 {
     int min_votes;
 
-    
+    int remaining_candidates[];
     return 0;
 }
 
