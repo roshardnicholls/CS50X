@@ -179,8 +179,15 @@ bool print_winner(void)
 int find_min(void)
 {
     int min_votes;
-
     int remaining_candidates[];
+
+    while (i < candidate_count)
+    {
+        if (candidates[i].eliminated = false)
+        {
+            remaining_candidates[]
+        }
+    }
     return 0;
 }
 
