@@ -192,7 +192,7 @@ int find_min(void)
     }
 
     // Create new array with just non-eliminated candidates
-    candidate remaining_candidates[candidate_count - eliminated_candidates];
+    candidate survivors[candidate_count - eliminated_candidates];
     eliminated_candidates = 0;
 
     for (int j = 0; j < candidate_count; j++)
