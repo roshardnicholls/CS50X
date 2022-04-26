@@ -207,7 +207,7 @@ int find_min(void)
         }
     }
 
-    
+    for (int k = 0; k < )
     return 0;
 }
 
