@@ -205,21 +205,21 @@ int find_min(void)
 
         else
         {
-            remaining_candidates[j - eliminated_candidates] = candidates[j];
+            survivors[j - eliminated_candidates] = candidates[j];
             remaining_candidates++;
         }
     }
 
     for (int k = 0; k < remaining_candidates; k++)
     {
-        if (remaining_candidates.votes[k] < remaining_candidates.votes[k + 1])
+        if (survivors.votes[k] < survivors.votes[k + 1])
         {
-            min_votes = remaining_candidates[k];
+            min_votes = survivors[k];
         }
 
         else
         {
-            min_votes = remaining_candidates[k + 1];
+            min_votes = survivors[k + 1];
         }
     }
     return min_votes;
