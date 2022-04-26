@@ -195,6 +195,7 @@ int find_min(void)
     {
         if (candidates[i].eliminated = false)
         {
+            
             remaining_candidates[]
         }
     }
