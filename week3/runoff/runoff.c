@@ -180,6 +180,7 @@ int find_min(void)
 {
     int min_votes = 0;
     int eliminated_candidates = 0;
+    int remaining_candidate_count = 0;
 
     // Calculate how many candidates are eliminated
     while (i < candidate_count)
@@ -204,11 +205,23 @@ int find_min(void)
         else
         {
             remaining_candidates[j - eliminated_candidates] = candidates[j];
+            remaining_candidate_count++;
         }
     }
 
-    for (int k = 0; k < )
-    return 0;
+    for (int k = 0; k < remaining_candidate_count; k++)
+    {
+        if (remaining_candidates[k] < remaining_candidates[k + 1])
+        {
+            min_votes = remaining_candidates[k];
+        }
+
+        else
+        {
+            min_votes = remaining_candidates[k + 1];
+        }
+    }
+    return min_votes;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
