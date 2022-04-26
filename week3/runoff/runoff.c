@@ -179,10 +179,8 @@ bool print_winner(void)
 int find_min(void)
 {
     int min_votes;
-    for (int i = 0; i < candidate_count -1; i++)
-    {
-        if (() && )
-    }
+
+    
     return 0;
 }
 
