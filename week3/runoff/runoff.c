@@ -181,6 +181,7 @@ int find_min(void)
     int min_votes = 0;
     int eliminated_candidates = 0;
 
+    // Calculate how many candidates are eliminated
     while (i < candidate_count)
     {
         if (candidates[i].eliminated = true)
@@ -189,18 +190,24 @@ int find_min(void)
         }
     }
 
+    // Create new array with just non-eliminated candidates
     candidate remaining_candidates[candidate_count - eliminated_candidates];
-
     eliminated_candidates = 0;
 
     while (j < candidate_count)
     {
         if (candidates[i].eliminated = false)
         {
+            eliminated_candidates++;
+        }
 
-            remaining_candidates[]
+        else
+        {
+            remaining_candidates[j - eliminated_candidates] = candidates[j];
         }
     }
+
+    
     return 0;
 }
 
