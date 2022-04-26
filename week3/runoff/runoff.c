@@ -145,7 +145,10 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            
+            if ()
+            {
+                
+            }
         }
     }
     return;
