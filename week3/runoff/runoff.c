@@ -222,6 +222,9 @@ int find_min(void)
             min_votes = survivors[k + 1].votes;
         }
     }
+
+    printf("Min votes: %i", min_votes);
+
     return min_votes;
 }
 
