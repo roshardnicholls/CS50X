@@ -191,11 +191,13 @@ int find_min(void)
 
     candidate remaining_candidates[candidate_count - eliminated_candidates];
 
+    eliminated_candidates = 0;
+    
     while (i < candidate_count)
     {
         if (candidates[i].eliminated = false)
         {
-            
+
             remaining_candidates[]
         }
     }
