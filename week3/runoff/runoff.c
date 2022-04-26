@@ -179,7 +179,7 @@ bool print_winner(void)
 int find_min(void)
 {
     int min_votes;
-    int remaining_candidates[];
+    candidate remaining_candidates[];
 
     while (i < candidate_count)
     {
