@@ -212,14 +212,14 @@ int find_min(void)
 
     for (int k = 0; k < remaining_candidates; k++)
     {
-        if (survivors.votes[k] < survivors.votes[k + 1])
+        if (survivors[k].votes < survivors[k + 1].votes)
         {
-            min_votes = survivors[k];
+            min_votes = survivors[k].votes;
         }
 
         else
         {
-            min_votes = survivors[k + 1];
+            min_votes = survivors[k + 1].votes;
         }
     }
     return min_votes;
