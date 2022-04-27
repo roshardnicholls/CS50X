@@ -179,52 +179,7 @@ bool print_winner(void)
 int find_min(void)
 {
     int min_votes = 0;
-    int eliminated_candidates = 0;
-    int remaining_candidates = 0;
-
-    // Calculate how many candidates are eliminated
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (candidates[i].eliminated == true)
-        {
-            eliminated_candidates++;
-        }
-    }
-    remaining_candidates = candidate_count - eliminated_candidates;
-    // Create new array with just non-eliminated candidates
-    candidate survivors[remaining_candidates];
-
-    eliminated_candidates = 0;
-
-    for (int j = 0; j < candidate_count; j++)
-    {
-        if (candidates[j].eliminated == false)
-        {
-            eliminated_candidates++;
-        }
-
-        else
-        {
-            survivors[j - eliminated_candidates] = candidates[j];
-            remaining_candidates++;
-        }
-    }
-
-    for (int k = 0; k < remaining_candidates; k++)
-    {
-        if (survivors[k].votes < survivors[k + 1].votes)
-        {
-            min_votes = survivors[k].votes;
-        }
-
-        else
-        {
-            min_votes = survivors[k + 1].votes;
-        }
-    }
-
-    printf("Min votes: %i", min_votes);
-
+    
     return min_votes;
 }
 
