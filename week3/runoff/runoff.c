@@ -188,6 +188,7 @@ int find_min(void)
     }
     while (n < candidate_count && candidates[n].eliminated = true)
 
+    for ( )
     return min_votes;
 }
 
