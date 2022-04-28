@@ -153,11 +153,6 @@ void tabulate(void)
             }
         }
     }
-
-    // for (int i = 0; i < candidate_count; i++)
-    // {
-    //     printf("%s: %i votes\n",candidates[i].name, candidates[i].votes);
-    // }
     return;
 }
 
