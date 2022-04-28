@@ -186,7 +186,7 @@ int find_min(void)
     {
         min_votes = candidates[n].votes;
     }
-    while (n < candidate_count && candidates[n].eliminated = true)
+    while (n < candidate_count && candidates[n].eliminated);
 
     // Calculate the minimum number of votes, skipping over any eliminated candidates
     for (int i = 0; i < candidate_count - 1; i++)
@@ -195,7 +195,7 @@ int find_min(void)
         {
             if (min_votes > candidates[i + 1].votes)
             {
-                min_votes > candidates[i + 1].votes;
+                min_votes = candidates[i + 1].votes;
             }
         }
     }
