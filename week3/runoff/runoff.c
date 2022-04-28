@@ -178,9 +178,15 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
+    int n = 0;
     int min_votes;
 
-    
+    // Set min_votes to the vote count of the first non-eliminated candidate
+    do
+    {
+        min_votes = candidates[n].votes;
+    }
+    while (n < candidate_count && candidates[n].eliminated = true)
 
     return min_votes;
 }
